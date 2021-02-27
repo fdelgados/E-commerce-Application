@@ -21,6 +21,8 @@ import com.example.demo.model.requests.CreateUserRequest;
 @RestController
 @RequestMapping("/api/user")
 public class UserController {
+	private static final int PASSWORD_MIN_LENGTH = 7;
+
 	private static final Logger log = LoggerFactory.getLogger(UserController.class);
 	
 	@Autowired
@@ -48,12 +50,19 @@ public class UserController {
 		User user = new User();
 		user.setUsername(createUserRequest.getUsername());
 
-		log.info("User name set with ", createUserRequest.getUsername());
+		log.info("User name set with \"{}\"", createUserRequest.getUsername());
 
 		Cart cart = new Cart();
 
-		if (createUserRequest.getPassword().length() < 7 ||
-				!createUserRequest.getPassword().equals(createUserRequest.getConfirmPassword())) {
+		if (createUserRequest.getPassword().length() < PASSWORD_MIN_LENGTH) {
+			log.error("Password is too short. Minimum length is {}", PASSWORD_MIN_LENGTH);
+
+			return ResponseEntity.badRequest().build();
+		}
+
+		if (!createUserRequest.getPassword().equals(createUserRequest.getConfirmPassword())) {
+			log.error("Password and password confirm does not match");
+
 			return ResponseEntity.badRequest().build();
 		}
 		user.setPassword(bCryptPasswordEncoder.encode(createUserRequest.getPassword()));
@@ -61,6 +70,8 @@ public class UserController {
 		user.setCart(cart);
 		cartRepository.save(cart);
 		userRepository.save(user);
+
+		log.info("User \"{}\" created successfully", createUserRequest.getUsername());
 
 		return ResponseEntity.ok(user);
 	}
