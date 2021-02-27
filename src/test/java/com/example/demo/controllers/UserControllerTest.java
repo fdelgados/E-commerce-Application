@@ -27,15 +27,14 @@ public class UserControllerTest {
 
     private UserController userController;
     private UserRepository userRepository;
-    private CartRepository cartRepository;
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
     @Before
     public void setUp() {
         userController = new UserController();
 
+        CartRepository cartRepository = mock(CartRepository.class);
         userRepository = mock(UserRepository.class);
-        cartRepository = mock(CartRepository.class);
         bCryptPasswordEncoder = mock(BCryptPasswordEncoder.class);
 
         TestUtils.injectObjects(userController, "userRepository", userRepository);
@@ -145,12 +144,6 @@ public class UserControllerTest {
     }
 
     private User createUser() {
-        User user = new User();
-
-        user.setId(USER_ID);
-        user.setUsername(USERNAME);
-        user.setPassword(HASHED_PASSWORD);
-
-        return user;
+        return TestUtils.createUser(USER_ID, USERNAME, HASHED_PASSWORD);
     }
 }
