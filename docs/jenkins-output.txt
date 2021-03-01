@@ -1,0 +1,673 @@
+Started by user Cisco Delgado
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/e-commerce
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[WS-CLEANUP] Done
+The recommended git tool is: NONE
+using credential 8d92e9e6-e24d-4205-a8ac-e5d2e24d50de
+Cloning the remote Git repository
+Cloning repository git@github.com:fdelgados/E-commerce-Application.git
+ > git init /var/jenkins_home/workspace/e-commerce # timeout=10
+Fetching upstream changes from git@github.com:fdelgados/E-commerce-Application.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.26.2'
+using GIT_SSH to set credentials
+ > git fetch --tags --force --progress -- git@github.com:fdelgados/E-commerce-Application.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url git@github.com:fdelgados/E-commerce-Application.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision 548d8515a39c4d3447cd00ba765f8e93be8ba80c (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 548d8515a39c4d3447cd00ba765f8e93be8ba80c # timeout=10
+Commit message: "Change packaging to war"
+ > git rev-list --no-walk aa771785fe136b91c2a1f61cee01d4203deee714 # timeout=10
+[e-commerce] $ /var/jenkins_home/tools/hudson.tasks.Maven_MavenInstallation/Apache_Maven_3.6.3/bin/mvn -f pom.xml clean compile package
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ----------------------< com.example:auth-course >-----------------------
+[INFO] Building auth-course 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ war ]---------------------------------
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-war-plugin/3.2.2/maven-war-plugin-3.2.2.pom
+Progress (1): 2.7/9.7 kB
+Progress (1): 5.5/9.7 kB
+Progress (1): 8.2/9.7 kB
+Progress (1): 9.7 kB
+
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-war-plugin/3.2.2/maven-war-plugin-3.2.2.pom (9.7 kB at 12 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-war-plugin/3.2.2/maven-war-plugin-3.2.2.jar
+Progress (1): 2.7/91 kB
+Progress (1): 5.5/91 kB
+Progress (1): 8.2/91 kB
+Progress (1): 11/91 kB
+Progress (1): 14/91 kB
+Progress (1): 16/91 kB
+Progress (1): 19/91 kB
+Progress (1): 22/91 kB
+Progress (1): 25/91 kB
+Progress (1): 27/91 kB
+Progress (1): 30/91 kB
+Progress (1): 33/91 kB
+Progress (1): 36/91 kB
+Progress (1): 38/91 kB
+Progress (1): 41/91 kB
+Progress (1): 44/91 kB
+Progress (1): 47/91 kB
+Progress (1): 49/91 kB
+Progress (1): 52/91 kB
+Progress (1): 55/91 kB
+Progress (1): 58/91 kB
+Progress (1): 60/91 kB
+Progress (1): 63/91 kB
+Progress (1): 66/91 kB
+Progress (1): 69/91 kB
+Progress (1): 71/91 kB
+Progress (1): 74/91 kB
+Progress (1): 77/91 kB
+Progress (1): 80/91 kB
+Progress (1): 82/91 kB
+Progress (1): 85/91 kB
+Progress (1): 88/91 kB
+Progress (1): 90/91 kB
+Progress (1): 91 kB
+
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-war-plugin/3.2.2/maven-war-plugin-3.2.2.jar (91 kB at 931 kB/s)
+[INFO]
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ auth-course ---
+[INFO] Deleting /var/jenkins_home/workspace/e-commerce/target
+[INFO]
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ auth-course ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 1 resource
+[INFO]
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ auth-course ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 20 source files to /var/jenkins_home/workspace/e-commerce/target/classes
+[INFO]
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ auth-course ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 1 resource
+[INFO]
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ auth-course ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 20 source files to /var/jenkins_home/workspace/e-commerce/target/classes
+[INFO]
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ auth-course ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /var/jenkins_home/workspace/e-commerce/src/test/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ auth-course ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 6 source files to /var/jenkins_home/workspace/e-commerce/target/test-classes
+[INFO]
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ auth-course ---
+[INFO]
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.demo.controllers.ItemControllerTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.158 s - in com.example.demo.controllers.ItemControllerTest
+[INFO] Running com.example.demo.controllers.UserControllerTest
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/root/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/root/.m2/repository/org/slf4j/slf4j-log4j12/1.7.25/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [ch.qos.logback.classic.util.ContextSelectorStaticBinder]
+10:31:07.983 [main] INFO com.example.demo.controllers.UserController - User name set with "username"
+10:31:07.988 [main] INFO com.example.demo.controllers.UserController - User "username" created successfully
+10:31:07.996 [main] INFO com.example.demo.controllers.UserController - User name set with "username"
+10:31:07.997 [main] ERROR com.example.demo.controllers.UserController - Password and password confirm does not match
+10:31:07.999 [main] INFO com.example.demo.controllers.UserController - User name set with "username"
+10:31:08.000 [main] ERROR com.example.demo.controllers.UserController - Password is too short. Minimum length is 7
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.382 s - in com.example.demo.controllers.UserControllerTest
+[INFO] Running com.example.demo.controllers.OrderControllerTest
+10:31:08.129 [main] INFO com.example.demo.controllers.OrderController - Order removed successfully
+10:31:08.159 [main] INFO com.example.demo.controllers.OrderController - Order submitted successfully
+10:31:08.169 [main] ERROR com.example.demo.controllers.OrderController - Order cannot be removed. User not found
+10:31:08.177 [main] ERROR com.example.demo.controllers.OrderController - Order cannot be submitted. User not found
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.155 s - in com.example.demo.controllers.OrderControllerTest
+[INFO] Running com.example.demo.controllers.CartControllerTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.04 s - in com.example.demo.controllers.CartControllerTest
+[INFO] Running com.example.demo.SareetaApplicationTests
+10:31:08.318 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.example.demo.SareetaApplicationTests]
+10:31:08.322 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+10:31:08.343 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+10:31:08.391 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.example.demo.SareetaApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+10:31:08.420 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.demo.SareetaApplicationTests], using SpringBootContextLoader
+10:31:08.427 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.demo.SareetaApplicationTests]: class path resource [com/example/demo/SareetaApplicationTests-context.xml] does not exist
+10:31:08.428 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.demo.SareetaApplicationTests]: class path resource [com/example/demo/SareetaApplicationTestsContext.groovy] does not exist
+10:31:08.430 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.example.demo.SareetaApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+10:31:08.431 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.demo.SareetaApplicationTests]: SareetaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+10:31:08.539 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.example.demo.SareetaApplicationTests]
+10:31:08.740 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/var/jenkins_home/workspace/e-commerce/target/classes/com/example/demo/SareetaApplication.class]
+10:31:08.742 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.demo.SareetaApplication for test class com.example.demo.SareetaApplicationTests
+10:31:08.940 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.example.demo.SareetaApplicationTests]: using defaults.
+10:31:08.941 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+10:31:09.012 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@40499e4f, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@51cd7ffc, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@30d4b288, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4cc6fa2a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@40f1be1b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7a791b66, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6f2cb653, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@14c01636, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@590c73d3, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6b9ce1bf, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@61884cb1, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@75ed9710]
+10:31:09.021 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.example.demo.SareetaApplicationTests]
+10:31:09.022 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.example.demo.SareetaApplicationTests]
+10:31:09.024 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.example.demo.SareetaApplicationTests]
+10:31:09.024 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.example.demo.SareetaApplicationTests]
+10:31:09.025 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.example.demo.SareetaApplicationTests]
+10:31:09.025 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.example.demo.SareetaApplicationTests]
+10:31:09.029 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@5b40ceb testClass = SareetaApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@13c3c1e1 testClass = SareetaApplicationTests, locations = '{}', classes = '{class com.example.demo.SareetaApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@b7c4869, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@72437d8d, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@33308786, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@1fde5d22], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+10:31:09.032 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.example.demo.SareetaApplicationTests]
+10:31:09.033 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.example.demo.SareetaApplicationTests]
+10:31:09.078 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.5.RELEASE)
+
+2021-03-01 10:31:09.898  INFO 2295 --- [           main] c.example.demo.SareetaApplicationTests   : Starting SareetaApplicationTests on c87f03a0fb4f with PID 2295 (started by root in /var/jenkins_home/workspace/e-commerce)
+2021-03-01 10:31:09.907  INFO 2295 --- [           main] c.example.demo.SareetaApplicationTests   : No active profile set, falling back to default profiles: default
+2021-03-01 10:31:11.727  INFO 2295 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-03-01 10:31:12.022  INFO 2295 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 266ms. Found 4 repository interfaces.
+2021-03-01 10:31:13.516  INFO 2295 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9a34c827] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-03-01 10:31:14.069  INFO 2295 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-03-01 10:31:14.605  INFO 2295 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-03-01 10:31:14.793  INFO 2295 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2021-03-01 10:31:15.026  INFO 2295 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2021-03-01 10:31:15.032  INFO 2295 --- [           main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2021-03-01 10:31:15.144  INFO 2295 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2021-03-01 10:31:15.551  INFO 2295 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-03-01 10:31:16.962  INFO 2295 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-01 10:31:18.912  WARN 2295 --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-01 10:31:19.262  INFO 2295 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@428eb3d5, org.springframework.security.web.context.SecurityContextPersistenceFilter@60ae7cf2, org.springframework.security.web.header.HeaderWriterFilter@16e907b6, org.springframework.web.filter.CorsFilter@5ddd84d2, org.springframework.security.web.authentication.logout.LogoutFilter@7aa3857b, com.example.demo.security.JWTAuthenticationFilter@3fd5d679, com.example.demo.security.JWTAuthenticationVerficationFilter@7aa15a80, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@bc8d68b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5273143e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4d065e1a, org.springframework.security.web.session.SessionManagementFilter@23ec2bdc, org.springframework.security.web.access.ExceptionTranslationFilter@186481d4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@11c3ce6a]
+2021-03-01 10:31:20.592  INFO 2295 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-01 10:31:21.300  INFO 2295 --- [           main] c.example.demo.SareetaApplicationTests   : Started SareetaApplicationTests in 12.193 seconds (JVM running for 15.632)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.117 s - in com.example.demo.SareetaApplicationTests
+2021-03-01 10:31:21.381  INFO 2295 --- [       Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-03-01 10:31:21.391  INFO 2295 --- [       Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-03-01 10:31:21.396  INFO 2295 --- [       Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-03-01 10:31:21.400  INFO 2295 --- [       Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+[INFO]
+[INFO] Results:
+[INFO]
+[INFO] Tests run: 22, Failures: 0, Errors: 0, Skipped: 0
+[INFO]
+[INFO]
+[INFO] --- maven-war-plugin:3.2.2:war (default-war) @ auth-course ---
+Downloading from central: https://repo.maven.apache.org/maven2/com/thoughtworks/xstream/xstream/1.4.10/xstream-1.4.10.pom
+Progress (1): 2.7/15 kB
+Progress (1): 5.5/15 kB
+Progress (1): 8.2/15 kB
+Progress (1): 11/15 kB
+Progress (1): 14/15 kB
+Progress (1): 15 kB
+
+Downloaded from central: https://repo.maven.apache.org/maven2/com/thoughtworks/xstream/xstream/1.4.10/xstream-1.4.10.pom (15 kB at 369 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/com/thoughtworks/xstream/xstream-parent/1.4.10/xstream-parent-1.4.10.pom
+Progress (1): 2.7/35 kB
+Progress (1): 5.5/35 kB
+Progress (1): 8.2/35 kB
+Progress (1): 11/35 kB
+Progress (1): 14/35 kB
+Progress (1): 16/35 kB
+Progress (1): 19/35 kB
+Progress (1): 22/35 kB
+Progress (1): 25/35 kB
+Progress (1): 27/35 kB
+Progress (1): 30/35 kB
+Progress (1): 33/35 kB
+Progress (1): 35 kB
+
+Downloaded from central: https://repo.maven.apache.org/maven2/com/thoughtworks/xstream/xstream-parent/1.4.10/xstream-parent-1.4.10.pom (35 kB at 1.0 MB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.pom
+Progress (1): 386 B
+
+Downloaded from central: https://repo.maven.apache.org/maven2/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.pom (386 B at 21 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.pom
+Progress (1): 1.6 kB
+
+Downloaded from central: https://repo.maven.apache.org/maven2/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.pom (1.6 kB at 115 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-mapping/3.0.0/maven-mapping-3.0.0.pom
+Progress (1): 2.7/4.1 kB
+Progress (1): 4.1 kB
+
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-mapping/3.0.0/maven-mapping-3.0.0.pom (4.1 kB at 259 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/22/maven-shared-components-22.pom
+Progress (1): 2.7/5.1 kB
+Progress (1): 5.1 kB
+
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/22/maven-shared-components-22.pom (5.1 kB at 284 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.16.1/commons-compress-1.16.1.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.25/plexus-interpolation-1.25.jar
+Downloading from central: https://repo.maven.apache.org/maven2/com/thoughtworks/xstream/xstream/1.4.10/xstream-1.4.10.jar
+Downloading from central: https://repo.maven.apache.org/maven2/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.jar
+Progress (1): 2.7/560 kB
+Progress (1): 5.5/560 kB
+Progress (1): 8.2/560 kB
+Progress (1): 11/560 kB
+Progress (1): 14/560 kB
+
+Downloading from central: https://repo.maven.apache.org/maven2/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.jar
+Progress (1): 16/560 kB
+Progress (1): 19/560 kB
+Progress (2): 19/560 kB | 2.7/85 kB
+Progress (2): 19/560 kB | 5.5/85 kB
+Progress (2): 19/560 kB | 8.2/85 kB
+Progress (2): 19/560 kB | 11/85 kB
+Progress (2): 19/560 kB | 14/85 kB
+Progress (3): 19/560 kB | 14/85 kB | 2.7/590 kB
+Progress (3): 22/560 kB | 14/85 kB | 2.7/590 kB
+Progress (3): 25/560 kB | 14/85 kB | 2.7/590 kB
+Progress (3): 27/560 kB | 14/85 kB | 2.7/590 kB
+Progress (3): 30/560 kB | 14/85 kB | 2.7/590 kB
+Progress (3): 33/560 kB | 14/85 kB | 2.7/590 kB
+Progress (3): 36/560 kB | 14/85 kB | 2.7/590 kB
+Progress (3): 38/560 kB | 14/85 kB | 2.7/590 kB
+Progress (3): 41/560 kB | 14/85 kB | 2.7/590 kB
+Progress (3): 44/560 kB | 14/85 kB | 2.7/590 kB
+Progress (4): 44/560 kB | 14/85 kB | 2.7/590 kB | 2.7/25 kB
+Progress (5): 44/560 kB | 14/85 kB | 2.7/590 kB | 2.7/25 kB | 2.7/7.2 kB
+Progress (5): 44/560 kB | 14/85 kB | 2.7/590 kB | 2.7/25 kB | 5.5/7.2 kB
+Progress (5): 44/560 kB | 14/85 kB | 2.7/590 kB | 2.7/25 kB | 7.2 kB
+Progress (5): 44/560 kB | 16/85 kB | 2.7/590 kB | 2.7/25 kB | 7.2 kB
+Progress (5): 44/560 kB | 16/85 kB | 5.5/590 kB | 2.7/25 kB | 7.2 kB
+Progress (5): 44/560 kB | 16/85 kB | 8.2/590 kB | 2.7/25 kB | 7.2 kB
+Progress (5): 44/560 kB | 16/85 kB | 11/590 kB | 2.7/25 kB | 7.2 kB
+Progress (5): 44/560 kB | 16/85 kB | 14/590 kB | 2.7/25 kB | 7.2 kB
+Progress (5): 44/560 kB | 16/85 kB | 16/590 kB | 2.7/25 kB | 7.2 kB
+Progress (5): 44/560 kB | 16/85 kB | 19/590 kB | 2.7/25 kB | 7.2 kB
+Progress (5): 44/560 kB | 16/85 kB | 22/590 kB | 2.7/25 kB | 7.2 kB
+
+Downloaded from central: https://repo.maven.apache.org/maven2/xmlpull/xmlpull/1.1.3.1/xmlpull-1.1.3.1.jar (7.2 kB at 83 kB/s)
+Progress (4): 47/560 kB | 16/85 kB | 22/590 kB | 2.7/25 kB
+Progress (4): 49/560 kB | 16/85 kB | 22/590 kB | 2.7/25 kB
+Progress (4): 52/560 kB | 16/85 kB | 22/590 kB | 2.7/25 kB
+Progress (4): 55/560 kB | 16/85 kB | 22/590 kB | 2.7/25 kB
+Progress (4): 58/560 kB | 16/85 kB | 22/590 kB | 2.7/25 kB
+Progress (4): 58/560 kB | 16/85 kB | 22/590 kB | 5.5/25 kB
+Progress (4): 58/560 kB | 16/85 kB | 22/590 kB | 8.2/25 kB
+Progress (4): 58/560 kB | 16/85 kB | 22/590 kB | 11/25 kB
+Progress (4): 58/560 kB | 16/85 kB | 22/590 kB | 14/25 kB
+Progress (4): 58/560 kB | 16/85 kB | 22/590 kB | 16/25 kB
+Progress (4): 58/560 kB | 16/85 kB | 22/590 kB | 19/25 kB
+Progress (4): 58/560 kB | 16/85 kB | 22/590 kB | 22/25 kB
+Progress (4): 58/560 kB | 16/85 kB | 22/590 kB | 25/25 kB
+Progress (4): 58/560 kB | 16/85 kB | 22/590 kB | 25 kB
+Progress (4): 58/560 kB | 19/85 kB | 22/590 kB | 25 kB
+Progress (4): 58/560 kB | 22/85 kB | 22/590 kB | 25 kB
+Progress (4): 58/560 kB | 25/85 kB | 22/590 kB | 25 kB
+Progress (4): 58/560 kB | 27/85 kB | 22/590 kB | 25 kB
+Progress (4): 58/560 kB | 30/85 kB | 22/590 kB | 25 kB
+Progress (4): 60/560 kB | 30/85 kB | 22/590 kB | 25 kB
+Progress (4): 63/560 kB | 30/85 kB | 22/590 kB | 25 kB
+Progress (4): 66/560 kB | 30/85 kB | 22/590 kB | 25 kB
+Progress (4): 69/560 kB | 30/85 kB | 22/590 kB | 25 kB
+Progress (4): 71/560 kB | 30/85 kB | 22/590 kB | 25 kB
+Progress (4): 74/560 kB | 30/85 kB | 22/590 kB | 25 kB
+Progress (4): 74/560 kB | 30/85 kB | 25/590 kB | 25 kB
+Progress (4): 74/560 kB | 30/85 kB | 27/590 kB | 25 kB
+Progress (4): 74/560 kB | 30/85 kB | 30/590 kB | 25 kB
+Progress (4): 74/560 kB | 30/85 kB | 33/590 kB | 25 kB
+Progress (4): 74/560 kB | 30/85 kB | 36/590 kB | 25 kB
+
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-mapping/3.0.0/maven-mapping-3.0.0.jar
+Progress (4): 74/560 kB | 33/85 kB | 36/590 kB | 25 kB
+Progress (5): 74/560 kB | 33/85 kB | 36/590 kB | 25 kB | 2.7/11 kB
+Progress (5): 74/560 kB | 33/85 kB | 36/590 kB | 25 kB | 5.5/11 kB
+Progress (5): 74/560 kB | 33/85 kB | 36/590 kB | 25 kB | 8.2/11 kB
+Progress (5): 74/560 kB | 33/85 kB | 36/590 kB | 25 kB | 11 kB
+
+Downloaded from central: https://repo.maven.apache.org/maven2/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.jar (25 kB at 201 kB/s)
+Progress (4): 74/560 kB | 36/85 kB | 36/590 kB | 11 kB
+Progress (4): 74/560 kB | 38/85 kB | 36/590 kB | 11 kB
+Progress (4): 77/560 kB | 38/85 kB | 36/590 kB | 11 kB
+Progress (4): 80/560 kB | 38/85 kB | 36/590 kB | 11 kB
+Progress (4): 80/560 kB | 38/85 kB | 38/590 kB | 11 kB
+Progress (4): 80/560 kB | 38/85 kB | 41/590 kB | 11 kB
+Progress (4): 80/560 kB | 38/85 kB | 44/590 kB | 11 kB
+Progress (4): 80/560 kB | 38/85 kB | 47/590 kB | 11 kB
+Progress (4): 80/560 kB | 38/85 kB | 49/590 kB | 11 kB
+Progress (4): 80/560 kB | 41/85 kB | 49/590 kB | 11 kB
+Progress (4): 80/560 kB | 44/85 kB | 49/590 kB | 11 kB
+Progress (4): 80/560 kB | 47/85 kB | 49/590 kB | 11 kB
+Progress (4): 80/560 kB | 49/85 kB | 49/590 kB | 11 kB
+Progress (4): 80/560 kB | 52/85 kB | 49/590 kB | 11 kB
+Progress (4): 80/560 kB | 55/85 kB | 49/590 kB | 11 kB
+
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-mapping/3.0.0/maven-mapping-3.0.0.jar (11 kB at 76 kB/s)
+Progress (3): 82/560 kB | 55/85 kB | 49/590 kB
+Progress (3): 85/560 kB | 55/85 kB | 49/590 kB
+Progress (3): 88/560 kB | 55/85 kB | 49/590 kB
+Progress (3): 90/560 kB | 55/85 kB | 49/590 kB
+Progress (3): 93/560 kB | 55/85 kB | 49/590 kB
+Progress (3): 93/560 kB | 55/85 kB | 52/590 kB
+Progress (3): 93/560 kB | 55/85 kB | 55/590 kB
+Progress (3): 93/560 kB | 55/85 kB | 58/590 kB
+Progress (3): 93/560 kB | 55/85 kB | 60/590 kB
+Progress (3): 93/560 kB | 55/85 kB | 63/590 kB
+Progress (3): 93/560 kB | 55/85 kB | 66/590 kB
+Progress (3): 96/560 kB | 55/85 kB | 66/590 kB
+Progress (3): 99/560 kB | 55/85 kB | 66/590 kB
+Progress (3): 101/560 kB | 55/85 kB | 66/590 kB
+Progress (3): 101/560 kB | 55/85 kB | 69/590 kB
+Progress (3): 101/560 kB | 58/85 kB | 69/590 kB
+Progress (3): 101/560 kB | 60/85 kB | 69/590 kB
+Progress (3): 101/560 kB | 63/85 kB | 69/590 kB
+Progress (3): 101/560 kB | 66/85 kB | 69/590 kB
+Progress (3): 101/560 kB | 69/85 kB | 69/590 kB
+Progress (3): 101/560 kB | 71/85 kB | 69/590 kB
+Progress (3): 101/560 kB | 74/85 kB | 69/590 kB
+Progress (3): 101/560 kB | 77/85 kB | 69/590 kB
+Progress (3): 101/560 kB | 80/85 kB | 69/590 kB
+Progress (3): 101/560 kB | 82/85 kB | 69/590 kB
+Progress (3): 104/560 kB | 82/85 kB | 69/590 kB
+Progress (3): 107/560 kB | 82/85 kB | 69/590 kB
+Progress (3): 110/560 kB | 82/85 kB | 69/590 kB
+Progress (3): 112/560 kB | 82/85 kB | 69/590 kB
+Progress (3): 115/560 kB | 82/85 kB | 69/590 kB
+Progress (3): 118/560 kB | 82/85 kB | 69/590 kB
+Progress (3): 121/560 kB | 82/85 kB | 69/590 kB
+Progress (3): 123/560 kB | 82/85 kB | 69/590 kB
+Progress (3): 123/560 kB | 82/85 kB | 71/590 kB
+Progress (3): 123/560 kB | 82/85 kB | 74/590 kB
+Progress (3): 123/560 kB | 82/85 kB | 77/590 kB
+Progress (3): 123/560 kB | 82/85 kB | 80/590 kB
+Progress (3): 123/560 kB | 82/85 kB | 82/590 kB
+Progress (3): 123/560 kB | 82/85 kB | 85/590 kB
+Progress (3): 123/560 kB | 82/85 kB | 88/590 kB
+Progress (3): 123/560 kB | 82/85 kB | 90/590 kB
+Progress (3): 123/560 kB | 85/85 kB | 90/590 kB
+Progress (3): 123/560 kB | 85 kB | 90/590 kB
+Progress (3): 126/560 kB | 85 kB | 90/590 kB
+Progress (3): 126/560 kB | 85 kB | 93/590 kB
+Progress (3): 126/560 kB | 85 kB | 96/590 kB
+Progress (3): 126/560 kB | 85 kB | 99/590 kB
+Progress (3): 126/560 kB | 85 kB | 101/590 kB
+Progress (3): 126/560 kB | 85 kB | 104/590 kB
+
+Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.25/plexus-interpolation-1.25.jar (85 kB at 429 kB/s)
+Progress (2): 129/560 kB | 104/590 kB
+Progress (2): 132/560 kB | 104/590 kB
+Progress (2): 134/560 kB | 104/590 kB
+Progress (2): 137/560 kB | 104/590 kB
+Progress (2): 140/560 kB | 104/590 kB
+Progress (2): 143/560 kB | 104/590 kB
+Progress (2): 145/560 kB | 104/590 kB
+Progress (2): 148/560 kB | 104/590 kB
+Progress (2): 151/560 kB | 104/590 kB
+Progress (2): 154/560 kB | 104/590 kB
+Progress (2): 156/560 kB | 104/590 kB
+Progress (2): 159/560 kB | 104/590 kB
+Progress (2): 162/560 kB | 104/590 kB
+Progress (2): 162/560 kB | 107/590 kB
+Progress (2): 162/560 kB | 110/590 kB
+Progress (2): 162/560 kB | 112/590 kB
+Progress (2): 162/560 kB | 115/590 kB
+Progress (2): 162/560 kB | 118/590 kB
+Progress (2): 162/560 kB | 121/590 kB
+Progress (2): 162/560 kB | 123/590 kB
+Progress (2): 162/560 kB | 126/590 kB
+Progress (2): 162/560 kB | 129/590 kB
+Progress (2): 162/560 kB | 132/590 kB
+Progress (2): 165/560 kB | 132/590 kB
+Progress (2): 167/560 kB | 132/590 kB
+Progress (2): 170/560 kB | 132/590 kB
+Progress (2): 173/560 kB | 132/590 kB
+Progress (2): 175/560 kB | 132/590 kB
+Progress (2): 178/560 kB | 132/590 kB
+Progress (2): 181/560 kB | 132/590 kB
+Progress (2): 181/560 kB | 134/590 kB
+Progress (2): 181/560 kB | 137/590 kB
+Progress (2): 181/560 kB | 140/590 kB
+Progress (2): 181/560 kB | 143/590 kB
+Progress (2): 181/560 kB | 145/590 kB
+Progress (2): 181/560 kB | 148/590 kB
+Progress (2): 181/560 kB | 151/590 kB
+Progress (2): 184/560 kB | 151/590 kB
+Progress (2): 186/560 kB | 151/590 kB
+Progress (2): 189/560 kB | 151/590 kB
+Progress (2): 192/560 kB | 151/590 kB
+Progress (2): 195/560 kB | 151/590 kB
+Progress (2): 197/560 kB | 151/590 kB
+Progress (2): 200/560 kB | 151/590 kB
+Progress (2): 200/560 kB | 154/590 kB
+Progress (2): 200/560 kB | 156/590 kB
+Progress (2): 200/560 kB | 159/590 kB
+Progress (2): 200/560 kB | 162/590 kB
+Progress (2): 200/560 kB | 165/590 kB
+Progress (2): 200/560 kB | 167/590 kB
+Progress (2): 200/560 kB | 170/590 kB
+Progress (2): 203/560 kB | 170/590 kB
+Progress (2): 206/560 kB | 170/590 kB
+Progress (2): 208/560 kB | 170/590 kB
+Progress (2): 211/560 kB | 170/590 kB
+Progress (2): 214/560 kB | 170/590 kB
+Progress (2): 217/560 kB | 170/590 kB
+Progress (2): 219/560 kB | 170/590 kB
+Progress (2): 219/560 kB | 173/590 kB
+Progress (2): 219/560 kB | 175/590 kB
+Progress (2): 219/560 kB | 178/590 kB
+Progress (2): 219/560 kB | 181/590 kB
+Progress (2): 219/560 kB | 184/590 kB
+Progress (2): 219/560 kB | 186/590 kB
+Progress (2): 219/560 kB | 189/590 kB
+Progress (2): 222/560 kB | 189/590 kB
+Progress (2): 225/560 kB | 189/590 kB
+Progress (2): 228/560 kB | 189/590 kB
+Progress (2): 230/560 kB | 189/590 kB
+Progress (2): 233/560 kB | 189/590 kB
+Progress (2): 236/560 kB | 189/590 kB
+Progress (2): 239/560 kB | 189/590 kB
+Progress (2): 239/560 kB | 192/590 kB
+Progress (2): 239/560 kB | 195/590 kB
+Progress (2): 239/560 kB | 197/590 kB
+Progress (2): 239/560 kB | 200/590 kB
+Progress (2): 239/560 kB | 203/590 kB
+Progress (2): 239/560 kB | 206/590 kB
+Progress (2): 239/560 kB | 208/590 kB
+Progress (2): 241/560 kB | 208/590 kB
+Progress (2): 244/560 kB | 208/590 kB
+Progress (2): 247/560 kB | 208/590 kB
+Progress (2): 250/560 kB | 208/590 kB
+Progress (2): 252/560 kB | 208/590 kB
+Progress (2): 255/560 kB | 208/590 kB
+Progress (2): 259/560 kB | 208/590 kB
+Progress (2): 259/560 kB | 211/590 kB
+Progress (2): 259/560 kB | 214/590 kB
+Progress (2): 259/560 kB | 217/590 kB
+Progress (2): 259/560 kB | 219/590 kB
+Progress (2): 259/560 kB | 222/590 kB
+Progress (2): 259/560 kB | 225/590 kB
+Progress (2): 259/560 kB | 228/590 kB
+Progress (2): 263/560 kB | 228/590 kB
+Progress (2): 267/560 kB | 228/590 kB
+Progress (2): 271/560 kB | 228/590 kB
+Progress (2): 275/560 kB | 228/590 kB
+Progress (2): 280/560 kB | 228/590 kB
+Progress (2): 284/560 kB | 228/590 kB
+Progress (2): 288/560 kB | 228/590 kB
+Progress (2): 292/560 kB | 228/590 kB
+Progress (2): 292/560 kB | 230/590 kB
+Progress (2): 292/560 kB | 233/590 kB
+Progress (2): 292/560 kB | 236/590 kB
+Progress (2): 292/560 kB | 239/590 kB
+Progress (2): 292/560 kB | 241/590 kB
+Progress (2): 292/560 kB | 244/590 kB
+Progress (2): 292/560 kB | 247/590 kB
+Progress (2): 292/560 kB | 250/590 kB
+Progress (2): 296/560 kB | 250/590 kB
+Progress (2): 300/560 kB | 250/590 kB
+Progress (2): 304/560 kB | 250/590 kB
+Progress (2): 308/560 kB | 250/590 kB
+Progress (2): 312/560 kB | 250/590 kB
+Progress (2): 316/560 kB | 250/590 kB
+Progress (2): 321/560 kB | 250/590 kB
+Progress (2): 321/560 kB | 252/590 kB
+Progress (2): 321/560 kB | 255/590 kB
+Progress (2): 321/560 kB | 259/590 kB
+Progress (2): 321/560 kB | 263/590 kB
+Progress (2): 321/560 kB | 267/590 kB
+Progress (2): 321/560 kB | 271/590 kB
+Progress (2): 325/560 kB | 271/590 kB
+Progress (2): 329/560 kB | 271/590 kB
+Progress (2): 333/560 kB | 271/590 kB
+Progress (2): 337/560 kB | 271/590 kB
+Progress (2): 337/560 kB | 275/590 kB
+Progress (2): 337/560 kB | 280/590 kB
+Progress (2): 337/560 kB | 284/590 kB
+Progress (2): 337/560 kB | 288/590 kB
+Progress (2): 341/560 kB | 288/590 kB
+Progress (2): 345/560 kB | 288/590 kB
+Progress (2): 349/560 kB | 288/590 kB
+Progress (2): 353/560 kB | 288/590 kB
+Progress (2): 357/560 kB | 288/590 kB
+Progress (2): 362/560 kB | 288/590 kB
+Progress (2): 366/560 kB | 288/590 kB
+Progress (2): 370/560 kB | 288/590 kB
+Progress (2): 370/560 kB | 292/590 kB
+Progress (2): 370/560 kB | 296/590 kB
+Progress (2): 370/560 kB | 300/590 kB
+Progress (2): 370/560 kB | 304/590 kB
+Progress (2): 370/560 kB | 308/590 kB
+Progress (2): 370/560 kB | 312/590 kB
+Progress (2): 370/560 kB | 316/590 kB
+Progress (2): 370/560 kB | 321/590 kB
+Progress (2): 370/560 kB | 325/590 kB
+Progress (2): 374/560 kB | 325/590 kB
+Progress (2): 378/560 kB | 325/590 kB
+Progress (2): 382/560 kB | 325/590 kB
+Progress (2): 386/560 kB | 325/590 kB
+Progress (2): 390/560 kB | 325/590 kB
+Progress (2): 394/560 kB | 325/590 kB
+Progress (2): 398/560 kB | 325/590 kB
+Progress (2): 402/560 kB | 325/590 kB
+Progress (2): 407/560 kB | 325/590 kB
+Progress (2): 407/560 kB | 329/590 kB
+Progress (2): 407/560 kB | 333/590 kB
+Progress (2): 407/560 kB | 337/590 kB
+Progress (2): 407/560 kB | 341/590 kB
+Progress (2): 407/560 kB | 345/590 kB
+Progress (2): 407/560 kB | 349/590 kB
+Progress (2): 407/560 kB | 353/590 kB
+Progress (2): 411/560 kB | 353/590 kB
+Progress (2): 415/560 kB | 353/590 kB
+Progress (2): 419/560 kB | 353/590 kB
+Progress (2): 419/560 kB | 357/590 kB
+Progress (2): 419/560 kB | 362/590 kB
+Progress (2): 419/560 kB | 366/590 kB
+Progress (2): 419/560 kB | 370/590 kB
+Progress (2): 419/560 kB | 374/590 kB
+Progress (2): 423/560 kB | 374/590 kB
+Progress (2): 427/560 kB | 374/590 kB
+Progress (2): 431/560 kB | 374/590 kB
+Progress (2): 435/560 kB | 374/590 kB
+Progress (2): 439/560 kB | 374/590 kB
+Progress (2): 443/560 kB | 374/590 kB
+Progress (2): 448/560 kB | 374/590 kB
+Progress (2): 452/560 kB | 374/590 kB
+Progress (2): 452/560 kB | 378/590 kB
+Progress (2): 452/560 kB | 382/590 kB
+Progress (2): 452/560 kB | 386/590 kB
+Progress (2): 452/560 kB | 390/590 kB
+Progress (2): 452/560 kB | 394/590 kB
+Progress (2): 452/560 kB | 398/590 kB
+Progress (2): 452/560 kB | 402/590 kB
+Progress (2): 452/560 kB | 407/590 kB
+Progress (2): 456/560 kB | 407/590 kB
+Progress (2): 460/560 kB | 407/590 kB
+Progress (2): 464/560 kB | 407/590 kB
+Progress (2): 468/560 kB | 407/590 kB
+Progress (2): 472/560 kB | 407/590 kB
+Progress (2): 475/560 kB | 407/590 kB
+Progress (2): 479/560 kB | 407/590 kB
+Progress (2): 479/560 kB | 411/590 kB
+Progress (2): 479/560 kB | 415/590 kB
+Progress (2): 479/560 kB | 419/590 kB
+Progress (2): 479/560 kB | 423/590 kB
+Progress (2): 479/560 kB | 427/590 kB
+Progress (2): 479/560 kB | 431/590 kB
+Progress (2): 479/560 kB | 435/590 kB
+Progress (2): 483/560 kB | 435/590 kB
+Progress (2): 487/560 kB | 435/590 kB
+Progress (2): 491/560 kB | 435/590 kB
+Progress (2): 495/560 kB | 435/590 kB
+Progress (2): 499/560 kB | 435/590 kB
+Progress (2): 503/560 kB | 435/590 kB
+Progress (2): 507/560 kB | 435/590 kB
+Progress (2): 511/560 kB | 435/590 kB
+Progress (2): 511/560 kB | 439/590 kB
+Progress (2): 511/560 kB | 443/590 kB
+Progress (2): 511/560 kB | 448/590 kB
+Progress (2): 511/560 kB | 452/590 kB
+Progress (2): 511/560 kB | 456/590 kB
+Progress (2): 511/560 kB | 460/590 kB
+Progress (2): 515/560 kB | 460/590 kB
+Progress (2): 520/560 kB | 460/590 kB
+Progress (2): 524/560 kB | 460/590 kB
+Progress (2): 528/560 kB | 460/590 kB
+Progress (2): 528/560 kB | 464/590 kB
+Progress (2): 528/560 kB | 468/590 kB
+Progress (2): 528/560 kB | 472/590 kB
+Progress (2): 528/560 kB | 476/590 kB
+Progress (2): 528/560 kB | 480/590 kB
+Progress (2): 528/560 kB | 484/590 kB
+Progress (2): 528/560 kB | 488/590 kB
+Progress (2): 532/560 kB | 488/590 kB
+Progress (2): 536/560 kB | 488/590 kB
+Progress (2): 540/560 kB | 488/590 kB
+Progress (2): 544/560 kB | 488/590 kB
+Progress (2): 548/560 kB | 488/590 kB
+Progress (2): 552/560 kB | 488/590 kB
+Progress (2): 556/560 kB | 488/590 kB
+Progress (2): 560 kB | 488/590 kB
+Progress (2): 560 kB | 493/590 kB
+Progress (2): 560 kB | 497/590 kB
+Progress (2): 560 kB | 501/590 kB
+Progress (2): 560 kB | 505/590 kB
+Progress (2): 560 kB | 509/590 kB
+Progress (2): 560 kB | 513/590 kB
+Progress (2): 560 kB | 517/590 kB
+Progress (2): 560 kB | 521/590 kB
+Progress (2): 560 kB | 525/590 kB
+Progress (2): 560 kB | 529/590 kB
+Progress (2): 560 kB | 534/590 kB
+Progress (2): 560 kB | 538/590 kB
+
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.16.1/commons-compress-1.16.1.jar (560 kB at 1.2 MB/s)
+Progress (1): 542/590 kB
+Progress (1): 546/590 kB
+Progress (1): 550/590 kB
+Progress (1): 554/590 kB
+Progress (1): 558/590 kB
+Progress (1): 562/590 kB
+Progress (1): 566/590 kB
+Progress (1): 570/590 kB
+Progress (1): 574/590 kB
+Progress (1): 579/590 kB
+Progress (1): 583/590 kB
+Progress (1): 587/590 kB
+Progress (1): 590 kB
+
+Downloaded from central: https://repo.maven.apache.org/maven2/com/thoughtworks/xstream/xstream/1.4.10/xstream-1.4.10.jar (590 kB at 1.2 MB/s)
+[INFO] Packaging webapp
+[INFO] Assembling webapp [auth-course] in [/var/jenkins_home/workspace/e-commerce/target/auth-course-0.0.1-SNAPSHOT]
+[INFO] Processing war project
+[INFO] Webapp assembled in [487 msecs]
+[INFO] Building war: /var/jenkins_home/workspace/e-commerce/target/auth-course-0.0.1-SNAPSHOT.war
+[INFO]
+[INFO] --- spring-boot-maven-plugin:2.1.5.RELEASE:repackage (repackage) @ auth-course ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  30.663 s
+[INFO] Finished at: 2021-03-01T10:31:27Z
+[INFO] ------------------------------------------------------------------------
+[DeployPublisher][INFO] Attempting to deploy 1 war file(s)
+[DeployPublisher][INFO] Deploying /var/jenkins_home/workspace/e-commerce/target/auth-course-0.0.1-SNAPSHOT.war to container Tomcat 9.x Remote with context myApp
+  [/var/jenkins_home/workspace/e-commerce/target/auth-course-0.0.1-SNAPSHOT.war] is not deployed. Doing a fresh deployment.
+  Deploying [/var/jenkins_home/workspace/e-commerce/target/auth-course-0.0.1-SNAPSHOT.war]
+Finished: SUCCESS

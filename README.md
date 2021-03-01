@@ -78,3 +78,9 @@ and that should, if those are valid credentials, return a 200 OK with an Authori
 
 ## Testing
 You must implement unit tests demonstrating at least 80% code coverage.
+
+## Metrics, Dashboards and Alerts
+You can find screenshots from Splunk in [`docs`](docs)
+
+## Build and Deploy
+You can find Jenkins build and deploy screenshots in [`docs`](docs), as well as the full console output.
